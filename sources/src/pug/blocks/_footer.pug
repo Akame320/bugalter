@@ -1,0 +1,36 @@
+.popup(id='popup')
+    .popup__wrapper
+        .popup__close.popup-close
+            +svgIcon({name: 'popup-close'})
+        .popup__bg
+            picture
+                source(srcset='images/content/popup/bg.webp' type='image/webp')
+                img(src='images/content/popup/bg.png')
+    form.popup__inner.form-submit
+        .popup__row
+            .popup__title Оставьте заявку и получите рассчет стоимости <span class='text--active'>в течении 5 минут</span>
+        .popup__row
+            +input-name()
+        .popup__row
+            +input-tel({placeholder: 'Телефон*(вводится без 8)'})
+        .popup__row
+            +input-submit({value: 'Оставить заявку'})
+
+
+
+
+footer.footer(id="footer")
+    .footer__wrapper
+        .container
+            .footer__inner
+                .footer__logo
+                    a(href="index.html").logo
+                        span.logo-top ВАШ БУХГАЛТЕР
+                        span.logo-bot Бухгалтерские услуги в Алматы
+                .copyright.
+                    © ТОО  «Ваш Бухгалтер» <br>
+                    Все права защищены. <br>
+                    Копирование материалов запрещено!
+                .dev
+                    span Создано командой
+                    img(src='images/content/footer/logo.png')

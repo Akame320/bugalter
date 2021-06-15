@@ -1,0 +1,35 @@
+header.header.fixed-mode
+	.container
+		.header__inner
+			a(href="index.html").logo
+				span.logo-top ВАШ БУХГАЛТЕР
+				span.logo-bot Бухгалтерские услуги в Алматы
+			.menu-block
+				a.menu-toggle
+					span.line.top
+					span.line.mid
+					span.line.bot
+				.menu-list
+					ul.menu
+						li
+							a(href="#" data-href='#intro') Главная
+						li
+							a(href="#" data-href='#services') Услуги
+						li
+							a(href="#" data-href='#reviews') Наши работы
+						li
+							a(href="#" data-href='#footer') Контакты
+
+					.header__tel
+						.header__tel-img
+							+svgIcon({name: 'tel-1'})
+						.header__tel-data
+							.header__tel-row
+								a(href='tel: ' + telSmall1) !{tel1}
+								a(href='tel: ' + telSmall2) !{tel2}
+
+			.header__btn.remove-tablet
+				a.btn.btn-default.open-popup Заказать звонок
+		//header__inner
+	//container
+//header

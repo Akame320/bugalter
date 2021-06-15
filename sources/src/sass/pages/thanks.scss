@@ -1,0 +1,65 @@
+.thanks-section{
+
+  &__wrapper{
+    position: relative;
+  }
+
+  &__bg{
+    width: 100%;
+    height: auto;
+
+    img, source{
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__inner{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 100;
+
+    width: 100%;
+
+    transform: translateY(-50%);
+  }
+
+  &__title{
+    font-size: 9.6rem;
+    font-weight: 800;
+
+    margin-bottom: 3.5rem;
+
+    @media screen and (max-width: $mobile-screen) {
+      text-align: center;
+      width: 100%;
+      font-size: 5rem;
+      margin-bottom: 2.5rem;
+    }
+  }
+
+  &__subtitle{
+    font-size: 2.4rem;
+    font-weight: 800;
+
+    margin-bottom: 4rem;
+
+    @media screen and (max-width: $mobile-screen) {
+      text-align: center;
+      width: 100%;
+      font-size: 2rem;
+      margin-bottom: 2.5rem;
+    }
+  }
+
+  &__btn{
+    max-width: 33rem;
+
+    @media screen and (max-width: $mobile-screen) {
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 2.5rem;
+    }
+  }
+}

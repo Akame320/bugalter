@@ -1,0 +1,641 @@
+extends base/_layout
+block head
+    title Бухгалтерские услуги в Алматы
+block page
+    section.main-section(id="intro")
+        .main-section__wrapper
+            .main-section__bg
+                +setImg({
+                    webp: 'images/content/main-section/bg-pc.webp',
+                    img: 'images/content/main-section/bg-pc.jpg',
+                    set: 'images/content/main-section/bg-mb',
+                })
+            .main-section__inner
+                .container
+                    .main-section__data
+                        .main-section__topTitle Для тех, кто хочет спать спокойно
+                        .main-section__title <span> Аутсорсинг бухгалтерии </span <br> от экспертов — лидеров отрасли
+                        .main-section__botTitle.text--italic Ваш учет будут вести атестованные и провереные специалисты. Опыт работы с нерезидентами более 15 лет.
+                        .main-section__botTitle.text--active.main-section__botTitle-verticalLine ТОО “ВАШ БУХГАЛТЕР” заменит вам бухгалтера, кадровика, налогового консультанта и личного ассистента всего от 30 000 тг.
+            .main-section__wrapper2
+                .container
+                    .main-section__inner2
+                        .main-section__bg2
+                            +setImg({
+                                webp: 'images/content/main-section/bg-pc-2.webp',
+                                img: 'images/content/main-section/bg-pc-2.jpg',
+                                set: 'images/content/main-section/bg-mb',
+                            })
+                        form.main-section__form.form-submit
+                            .main-section__form-inner
+                                h3.main-section__form-title Оставьте заявку, <br> и получите <span class='text--active'>скидку 20%</span> на <br> первый месяц обслуживания
+                                .main-section__form-input
+                                    +input-tel({placeholder: "Телефон*(вводится без 8)"})
+                                .main-section__form-input
+                                    +input-submit({value: "Оставить заявку"})
+    section.advantages-section
+        .advantages-section__wrapper
+            .advantages-section__img
+                +setImg({
+                    webp: 'images/content/advantages-section/bg-pc.webp',
+                    img: 'images/content/advantages-section/bg-pc.jpg',
+                    set: 'images/content/advantages-section/bg-mb',
+                })
+            .container
+                .advantages-section__inner
+                    .advantages-section__data
+                        +advantagesCol({
+                            icon: "adv-1",
+                            text: "<span class='text--bold'>Сокращение ваших расходов</span> на сотрудников, аренду и налоги"
+                        })
+                        +advantagesCol({
+                            icon: "adv-2",
+                            text: "Своевременную <span class='text--bold'> сдачу отчетности</span> Работа с <span class='text--bold'>первичной документацией</span>"
+                        })
+                        +advantagesCol({
+                            icon: "adv-3",
+                            text: "Восстановление <span class='text--bold'>бухгалтерского учета</span>"
+                        })
+                        +advantagesCol({
+                            icon: "adv-4",
+                            text: "Оформление <span class='text--bold'> экспортных, импортных операций</span>,также <span class='text--bold'>Таможенный Союз</span>"
+                        })
+                        +advantagesCol({
+                            icon: "adv-5",
+                            text: "Постоянную поддержку и <span class='text--bold'> бесплатное консультирование</span>"
+                        })
+                        +advantagesCol({
+                            icon: "adv-6",
+                            text: "Защиту при <span class='text--bold'> налоговой проверке</span>"
+                        })
+
+
+    .calculate-section(id="services")
+        .calculate-section__wrapper
+            .calculate-section__bg
+                +setImg({
+                    webp: 'images/content/calculate-section/bg-pc-1.webp',
+                    img: 'images/content/calculate-section/bg-pc-1.jpg',
+                    set: 'images/content/calculate-section/bg-mb-1',
+                })
+            .container
+                .calculate-section__inner
+                    .calculate-section__data
+                        form(id='calculate__form-submit').calculate-section__services.form-submit
+                            .calculate-section__title
+                                +sectionTitle({text: 'Выберите итересующую вас <span class="text--active"> услугу</span>'})
+                            .calculate-section__services-data
+                                +calculateServicesInput({
+                                    tabIndex: 'tab-1',
+                                    name: 'type-services',
+                                    checked: true,
+                                    id: 'type-services-1',
+                                    text: '<span>Бухгалтерский учет</span>',
+                                    value: 'Бухгалтерский учет'
+                                })
+                                +calculateServicesInput({
+                                    tabIndex: 'tab-2',
+                                    name: 'type-services',
+                                    id: 'type-services-2',
+                                    text: '<span>Налоговая и статистическая отчетность</span>',
+                                    value: 'Налоговая и статистическая отчетность'
+                                })
+                                +calculateServicesInput({
+                                    tabIndex: 'tab-3',
+                                    name: 'type-services',
+                                    id: 'type-services-3',
+                                    text: '<span>Кадровый учет</span>',
+                                    value: 'Кадровый учет'
+                                })
+                                +calculateServicesInput({
+                                    tabIndex: 'tab-4',
+                                    name: 'type-services',
+                                    id: 'type-services-4',
+                                    text: '<span>Дополнительные услуги</span>',
+                                    value: 'Дополнительные услуги'
+                                })
+                                //_____________1
+                            .calculate-section__cart-data.tab-1.tab-all
+                                .calculate-section__arrow
+                                    .calculate-section__slider-wrapper
+                                        .calculate-section__arrow
+                                            .calculate-section__arrow-prev
+                                                picture
+                                                    img(src='images/content/reviews-section/icons/arrow-left.png')
+                                            .calculate-section__arrow-next
+                                                picture
+                                                    img(src='images/content/reviews-section/icons/arrow-right.png')
+                                .calculate-section__cart-slider
+                                    .calculate-section__cart-slide
+                                        .calculate-section__cart-slideInner
+                                            +calculateCartItem({
+                                                name: 'type-cart-1',
+                                                id: 'type-cart-1',
+                                                text: '<span>Бухгалтерские и налоговые консультации</span>',
+                                                value: 'Бухгалтерские и налоговые консультации'
+                                            })
+                                            +calculateCartItem({
+                                                name: 'type-cart-2',
+                                                id: 'type-cart-2',
+                                                text: '<span>Ведение бух учета в 1С Казахстан</span>',
+                                                value: 'Ведение бух учета в 1С Казахстан'
+                                            })
+                                            +calculateCartItem({
+                                                name: 'type-cart-3',
+                                                id: 'type-cart-3',
+                                                text: '<span>Экспресс-аудит бух учета предыдущего периода</span>',
+                                                value: 'Экспресс-аудит бух учета предыдущего периода'
+                                            })
+                                            +calculateCartItem({
+                                                name: 'type-cart-4',
+                                                id: 'type-cart-4',
+                                                text: '<span>Восстановление бух учета</span>',
+                                                value: 'Восстановление бух учета'
+                                            })
+                                            +calculateCartItem({
+                                                name: 'type-cart-5',
+                                                id: 'type-cart-5',
+                                                text: '<span>Ведение онлайн-банкинга</span>',
+                                                value: 'Ведение  онлайн-банкинга'
+                                            })
+                                            +calculateCartItem({
+                                                name: 'type-cart-6',
+                                                id: 'type-cart-6',
+                                                text: '<span>Постановка бух учета</span>',
+                                                value: 'Постановка бух учета'
+                                            })
+                                //_____________2
+                            .calculate-section__cart-data.tab-2.tab-all
+                                .calculate-section__arrow
+                                    .calculate-section__slider-wrapper
+                                        .calculate-section__arrow
+                                            .calculate-section__arrow-prev
+                                                picture
+                                                    img(src='images/content/reviews-section/icons/arrow-left.png')
+                                            .calculate-section__arrow-next
+                                                picture
+                                                    img(src='images/content/reviews-section/icons/arrow-right.png')
+                                .calculate-section__cart-slider
+                                    .calculate-section__cart-slide
+                                        .calculate-section__cart-slideInner
+                                            +calculateCartItem({
+                                                name: 'type-cart-7',
+                                                id: 'type-cart-7',
+                                                text: '<span>Налоговое планирование</span>',
+                                                value: 'Налоговое планирование'
+                                            })
+                                            +calculateCartItem({
+                                                name: 'type-cart-8',
+                                                id: 'type-cart-8',
+                                                text: '<span>Расчет налогов</span>',
+                                                value: 'Расчет налогов'
+                                            })
+                                            +calculateCartItem({
+                                                name: 'type-cart-9',
+                                                id: 'type-cart-9',
+                                                text: '<span>Заполнение налоговых деклараций</span>',
+                                                value: 'Заполнение налоговых деклараций'
+                                            })
+                                            +calculateCartItem({
+                                                name: 'type-cart-10',
+                                                id: 'type-cart-10',
+                                                text: '<span>Перечисление обязательных платежей в бюджет</span>',
+                                                value: 'Перечисление обязательных платежей в бюджет'
+                                            })
+                                            +calculateCartItem({
+                                                name: 'type-cart-11',
+                                                id: 'type-cart-11',
+                                                text: '<span>Формирование  статистической отчетности за период</span>',
+                                                value: 'Формирование  статистической отчетности за период'
+                                            })
+                                            +calculateCartItem({
+                                                name: 'type-cart-12',
+                                                id: 'type-cart-12',
+                                                text: '<span>Отправка статистической отчетности в электронном виде или нарочным</span>',
+                                                value: 'Отправка статистической отчетности в электронном виде или нарочным'
+                                            })
+                                //_____________3
+                            .calculate-section__cart-data.tab-3.tab-all
+                                .calculate-section__arrow
+                                    .calculate-section__slider-wrapper
+                                        .calculate-section__arrow
+                                            .calculate-section__arrow-prev
+                                                picture
+                                                    img(src='images/content/reviews-section/icons/arrow-left.png')
+                                            .calculate-section__arrow-next
+                                                picture
+                                                    img(src='images/content/reviews-section/icons/arrow-right.png')
+                                .calculate-section__cart-slider
+                                    .calculate-section__cart-slide
+                                        .calculate-section__cart-slideInner
+                                            +calculateCartItem({
+                                                name: 'type-cart-13',
+                                                id: 'type-cart-13',
+                                                text: '<span>Ведение кадрового делопроизводства</span>',
+                                                value: 'Ведение кадрового делопроизводства'
+                                            })
+                                            +calculateCartItem({
+                                                name: 'type-cart-14',
+                                                id: 'type-cart-14',
+                                                text: '<span>Расчет заработной платы , других начислений и налогов</span>',
+                                                value: 'Расчет заработной платы , других начислений и налогов'
+                                            })
+                                            +calculateCartItem({
+                                                name: 'type-cart-15',
+                                                id: 'type-cart-15',
+                                                text: '<span>Ведение корреспонденции</span>',
+                                                value: 'Ведение корреспонденции'
+                                            })
+                                //_____________4
+                            .calculate-section__cart-data.tab-4.tab-all
+                                .calculate-section__arrow
+                                    .calculate-section__slider-wrapper
+                                        .calculate-section__arrow
+                                            .calculate-section__arrow-prev
+                                                picture
+                                                    img(src='images/content/reviews-section/icons/arrow-left.png')
+                                            .calculate-section__arrow-next
+                                                picture
+                                                    img(src='images/content/reviews-section/icons/arrow-right.png')
+                                .calculate-section__cart-slider
+                                    .calculate-section__cart-slide
+                                        .calculate-section__cart-slideInner
+                                            +calculateCartItem({
+                                                name: 'type-cart-16',
+                                                id: 'type-cart-16',
+                                                text: '<span>Подготовка договоров поставщиков и покупателей</span>',
+                                                value: 'Подготовка договоров поставщиков и покупателей'
+                                            })
+                                            +calculateCartItem({
+                                                name: 'type-cart-17',
+                                                id: 'type-cart-17',
+                                                text: '<span>Проведение независимой инвентаризации</span>',
+                                                value: 'Проведение независимой инвентаризации'
+                                            })
+                                            +calculateCartItem({
+                                                name: 'type-cart-18',
+                                                id: 'type-cart-18',
+                                                text: '<span>Подготовка документов для получения кредита в банке физическими и юридическими лицами</span>',
+                                                value: 'Подготовка документов для получения кредита в банке физическими и юридическими лицами'
+                                            })
+                                            +calculateCartItem({
+                                                name: 'type-cart-19',
+                                                id: 'type-cart-19',
+                                                text: '<span>Сдача налоговой декларации физических лиц</span>',
+                                                value: 'Сдача налоговой декларации физических лиц'
+                                            })
+                                            +calculateCartItem({
+                                                name: 'type-cart-20',
+                                                id: 'type-cart-20',
+                                                text: '<span>Разработка бухгалтерской и налоговой учетной политики</span>',
+                                                value: 'Разработка бухгалтерской и налоговой учетной политики'
+                                            })
+                                            +calculateCartItem({
+                                                name: 'type-cart-21',
+                                                id: 'type-cart-21',
+                                                text: '<span>Регистрация контрольно-кассовых машин</span>',
+                                                value: 'Регистрация контрольно-кассовых машин'
+                                            })
+                                    .calculate-section__cart-slide
+                                        .calculate-section__cart-slideInner
+                                            +calculateCartItem({
+                                                name: 'type-cart-22',
+                                                id: 'type-cart-22',
+                                                text: '<span>Электронное декларирование товаров</span>',
+                                                value: 'Электронное декларирование товаров'
+                                            })
+                                            +calculateCartItem({
+                                                name: 'type-cart-23',
+                                                id: 'type-cart-23',
+                                                text: '<span>Информирование клиентов об изменениях в налоговом законодательстве </span>',
+                                                value: 'Информирование клиентов об изменениях в налоговом законодательстве '
+                                            })
+                                            +calculateCartItem({
+                                                name: 'type-cart-24',
+                                                id: 'type-cart-24',
+                                                text: '<span>Юридическая и налоговая регистрация ИП и ТОО, подготовка учредительных документов</span>',
+                                                value: 'Юридическая и налоговая регистрация ИП и ТОО, подготовка учредительных документов'
+                                            })
+                                            +calculateCartItem({
+                                                name: 'type-cart-25',
+                                                id: 'type-cart-25',
+                                                text: '<span>Приостановление и восстановление деятельности ИП и ТОО</span>',
+                                                value: 'Приостановление и восстановление деятельности ИП и ТОО'
+                                            })
+                                            +calculateCartItem({
+                                                name: 'type-cart-26',
+                                                id: 'type-cart-26',
+                                                text: '<span>Ликвидация предприятия</span>',
+                                                value: 'Ликвидация предприятия'
+                                            })
+                                            +calculateCartItem({
+                                                name: 'type-cart-27',
+                                                id: 'type-cart-27',
+                                                text: '<span>Консультации по налогообложению</span>',
+                                                value: 'Консультации по налогообложению'
+                                            })
+                            .popup(id='popup2')
+                                .popup__wrapper
+                                    .popup__close.popup-close
+                                        +svgIcon({name: 'popup-close'})
+                                    .popup__bg
+                                        picture
+                                            source(srcset='images/content/popup/bg.webp' type='image/webp')
+                                            img(src='images/content/popup/bg.png')
+                                .popup__inner
+                                    .popup__row
+                                        .popup__title Оставьте заявку и получите рассчет стоимости <span class='text--active'>в течении 5 минут</span>
+                                    .popup__row
+                                        +input-name()
+                                    .popup__row
+                                        +input-tel({placeholder: 'Телефон*(вводится без 8)'})
+                                    .popup__row
+                                        +input-submit({value: 'Оставить заявку'})
+                            .calculate-section__btn
+                                a.btn.btn-default.form-get Заказать выбранное
+                        form.calculate-section__form.form-submit
+                            .calculate-section__form-title Получить полный прайс на пакеты услуг <span class='text--active'> прямо сейчас</span>
+                            .calculate-section__form-row
+                                .calculate-section__form-input
+                                    +input-tel({placeholder: 'Телефон*(вводится без 8)'})
+                                .calculate-section__form-input
+                                    +input-submit({value: 'Получить прайс'})
+    section.reviews-section(id="reviews")
+        .container
+            .reviews-section__wrapper
+                .reviews-section__inner
+                    .reviews-section__title
+                        +sectionTitle({text: 'Отзывы наших клиентов <br> <span class="text--active">лучшая оценка нашего проффесионализма</span>'})
+                    .reviews-section__slider-wrapper
+                        .reviews-section__arrow
+                            .reviews-section__arrow-prev
+                                picture
+                                    img(src='images/content/reviews-section/icons/arrow-left.png')
+                            .reviews-section__arrow-next
+                                picture
+                                    img(src='images/content/reviews-section/icons/arrow-right.png')
+                        .reviews-section__slider
+                            +slide({img: 'images/content/reviews-section/0'})
+                            +slide({img: 'images/content/reviews-section/1'})
+                            +slide({img: 'images/content/reviews-section/2'})
+                            +slide({img: 'images/content/reviews-section/3'})
+    section.calculate-section2
+        .calculate-section2__wrapper
+            .calculate-section2__bg
+                picture
+                    source(srcset='images/content/calculate-section2/bg-pc.webp' media="(min-width: 767px)" type='image/webp')
+                    source(srcset='images/content/calculate-section2/bg-mb' + '.webp' media="(min-width: 0) and (max-width: 767px)" type='image/webp')
+                    img(src='images/content/calculate-section2/bg-pc.png' srcset='images/content/calculate-section/bg-mb.png' + ' 767w')
+            .calculate-section2__bg2
+                picture
+                    source(srcset='images/content/calculate-section2/bg-pc-2.webp' media="(min-width: 767px)" type='image/webp')
+                    source(srcset='images/content/calculate-section2/bg-mb-2' + '.webp' media="(min-width: 0) and (max-width: 767px)" type='image/webp')
+                    img(src='images/content/calculate-section2/bg-pc-2.png' srcset='images/content/calculate-section/bg-mb-2.png' + ' 767w')
+            .container
+                .calculate-section2__inner
+                    .calculate-section2__title
+                        +sectionTitle({text: 'Выберите <span class="text--active">итересующую вас услугу</span>'})
+                        .subtitle Введите данные, и мы подберем Вам индивидуальный пакет обслуживания в ближайшее время
+                    form.calculate-section2__form.form-submit
+                        .calculate-section2__radio
+                            +calculateServicesInput({
+                                name: 'type-services2--1',
+                                text: '<span>ТОО</span>',
+                                checked: true,
+                                value: 'ТОО',
+                                id: 'type-services-21'
+                            })
+                            +calculateServicesInput({
+                                name: 'type-services2--1',
+                                text: '<span>ИП</span>',
+                                value: 'ИП',
+                                id: 'type-services-22'
+                            })
+                            +calculateServicesInput({
+                                name: 'type-services2--1',
+                                text: '<span>Другое</span>',
+                                value: 'Другое',
+                                id: 'type-services-23'
+                            })
+                        .calculate-section2__text Режим налогообложения:
+                        .calculate-section2__radio
+                            +calculateServicesInput({
+                                name: 'type-services2--2',
+                                checked: true,
+                                text: '<span>Общеустановленный</span>',
+                                value: 'Общеустановленный',
+                                id: 'type-services-031'
+                            })
+                            +calculateServicesInput({
+                                name: 'type-services2--2',
+                                text: '<span>Упрощенный</span>',
+                                value: 'Упрощенный',
+                                id: 'type-services-032'
+                            })
+                            +calculateServicesInput({
+                                name: 'type-services2--2',
+                                text: '<span>Патент</span>',
+                                value: 'Патент',
+                                id: 'type-services-033'
+                            })
+                        .calculate-section2__text Вид деятельности:
+                        .calculate-section2__radio
+                            +calculateServicesInput({
+                                checked: true,
+                                name: 'type-services2--3',
+                                text: '<span>Услуги</span>',
+                                value: 'Услуги',
+                                id: 'type-services-012'
+                            })
+                            +calculateServicesInput({
+                                name: 'type-services2--3',
+                                text: '<span>Торговля</span>',
+                                value: 'Торговля',
+                                id: 'type-services-013'
+                            })
+                            +calculateServicesInput({
+                                name: 'type-services2--3',
+                                text: '<span>Производство</span>',
+                                value: 'Производство',
+                                id: 'type-services-014'
+                            })
+                        .calculate-section2__radio
+                            .calculate-section2__checbox
+                                input(type="checkbox" name='type-services4000' id='type-services4-0' value='НДС')
+                                label(for='type-services4-0').cart-label
+                                    span.block
+                                    span НДС
+                            .calculate-section2__checbox
+                                input(type="checkbox" name='type-services4001' id='type-services4-1' value='ЭСФ')
+                                label(for='type-services4-1').cart-label
+                                    span.block
+                                    span ЭСФ
+                        .calculate-section2__number-wrapper
+                            span Количество сотрудников:
+                            input.input-text.calculate-section2__number(name='teamNumber'  min='0' value='0' placeholder='Введите цифру' type='number')
+                        .calculate-section2__number-wrapper
+                            span Количество операций:
+                            input.input-text.calculate-section2__number(name='operationNumber' min='0'  value='0' placeholder='Введите цифру'  type='number')
+                        .calculate-section2__radio.mt
+                            .calculate-section2__input-inner
+                                +input-name()
+                            .calculate-section2__input-inner
+                                +input-tel({placeholder: 'Введите номер*'})
+                            .calculate-section2__input-inner
+                                +input-email()
+                        .calculate-section2__btn
+                            button(type='submit').btn.btn-default Рассчитать стоимость
+                        .calculate-section2__msg
+                            p *Ваши данные останутся в безопасности и не будут переданы третьим <лицам></лицам>
+
+    section.advantages-section2
+        .advantages-section2__wrapper
+            .container
+                .advantages-section__title
+                    +sectionTitle({text: '<span class="text--active">Ваша гарантия</span> по договору'})
+                .advantages-section2__inner
+                    .advantages-section__data
+                        +advantagesCol({
+                            icon: "adv-7",
+                            text: "<span class='text--bold'>Своевременная сдача</span><br> финансовой отчетности"
+                        })
+                        +advantagesCol({
+                            icon: "adv-8",
+                            text: "<span class='text--bold'>Порядок в документобороте </span><br> вашей компании"
+                        })
+                        +advantagesCol({
+                            icon: "adv-9",
+                            text: "<span class='text--bold'>Оперативное обслуживание</span><br> ваших обращений"
+                        })
+                        +advantagesCol({
+                            activeMobile: true,
+                            icon: "adv-4",
+                            text: "Оформление <span class='text--bold'> экспортных, импортных операций</span>,также <span class='text--bold'>Таможенный Союз</span>"
+                        })
+
+    section.questions-section
+        .questions-section__wrapper
+            .questions-section__bg
+                picture
+                    source(srcset='images/content/qustions-section/bg-pc.webp' type='image/webp')
+                    source(srcset='images/content/qustions-section/bg-mb' + '.webp' type='image/webp')
+                    img(src='images/content/qustions-section/bg-pc.png')
+            .container
+                .questions-section__title
+                    +sectionTitle({text: 'Часто <span class="text--active">задаваемые вопросы:</span>'})
+                .questions-section__inner
+                    +qustionsRow({
+                        title: 'Мы только зарегистрировали компанию, что нужно, чтобы заказать ваши услуги, какие документы нужны от нас?',
+                        text: 'Если вы только зарегистрировали компанию, нам понадобятся копии учредительных документов, свидетельство о регистрации юридического лица, свидетельство о постановке на учет в  налоговых органах(БИН), решение/протокол о создании, приказ о назначении генерального директора. Мы заведем базу в программе 1С для вашей компании и начинаем работать.'
+                    })
+                    +qustionsRow({
+                        title: 'Составление отчетности входит в услугу, или это оплачивается отдельно?',
+                        text: 'При заключении договора, все входит в стоимость абонентской платы. Разумеется, составление бухгалтерской и налоговой отчетности входит в наши обязанности и дополнительно не оплачивается.'
+                    })
+                    +qustionsRow({
+                        title: 'Сколько стоят ваши услуги?',
+                        text: 'Тариф рассчитывается индивидуально на каждого клиента и зависит от таких показателей, как количество бухгалтерских операций в месяц, количество сотрудников, система налогообложения, вид деятельности и др.'
+                    })
+                    +qustionsRow({
+                        title: 'Мы планировали взять штатного бухгалтера. В чем отличие и удобство бухгалтерского аутсорсинга?',
+                        text: '1.Для начала – это экономия средств. Тарифы при бухгалтерском обслуживании ниже, чем зарплата штатного бухгалтера. <br> 2.Кроме того, отсутствует личный фактор, который всегда существует при приеме человека на ставку: больничные, отпуска, личные проблемы и даже плохое настроение.<br>3.Наши специалисты постоянно повышают квалификацию и находятся в курсе всех изменений в законодательстве. А это значит, что риск ошибок сведен к минимуму и Вам не нужно тратить средства компании на повышение квалификации своего бухгалтера и посещение им профессиональных семинаров.<br>4.Добавьте к зарплате Вашего штатного бухгалтера средства, выделяемые на организацию его рабочего места, покупку и поддержание актуальных версий бухгалтерских программ, канцелярские расходы и т.д. Получается достаточно крупная сумма. Посмотрите сравнительную таблицу, как снижаются издержки компании при передаче бухгалтерии на аутсорсинг.<br>5.Важно! Если вы не бухгалтер, принимая человека на работу Вы можете руководствоваться только личным впечатлением и данными резюме. А профессионализм Вы сможете оценить только в процессе работы. В лучшем случае это произойдет через месяц, а то и позже... Стоит ли рисковать временем и деньгами?'
+                    })
+
+    section.lider-section
+        .lider-section__wrapper
+            .container
+                .lider-section__inner
+                    .lider-section__title
+                        +sectionTitle({text: 'НАШ РУКОВОДИТЕЛЬ <br> <span class="text--active">ЗНАКОМИТСЯ С КАЖДЫМ КЛИЕНТОМ ЛИЧНО</span>'})
+                    .lider-section__data
+                        form.lider-section__form.form-submit
+                            .lider-section__form-row
+                                .lider-section__form-title <span class='text--active'> Хотите обсудить <br> Ваш запрос лично? <br></span> Приглашаем Вас в офис!
+                            .lider-section__form-row
+                                +input-tel({placeholder: 'Телефон*(вводится без 8)'})
+                            .lider-section__form-row
+                                +input-submit({value: 'Оставить заявку'})
+                        .lider-section__video.video
+                            +setImg({
+                                webp: 'images/content/lider-section/0-pc.webp',
+                                img: 'images/content/lider-section/0-pc.jpg',
+                                set: 'images/content/lider-section/0-mb',
+                            })
+                            //.play
+                            //    +svgIcon({name: 'play'})
+                            p.lider-section__message.text--bold Оксана Осадчая
+                            p.lider-section__message Основатель и Генеральный директор ТОО "Ваш Бухгалтер"
+
+    section.map-section(id='map')
+        .map-section__wrapper
+            .container
+                .map-section__inner
+                    .map-section__data
+                        .map-section__row
+                            .icon
+                                +svgIcon({name: 'mark'})
+                            span г. Алматы , ул. Тулебаева 38/61, офис 501, 504
+                        .map-section__row
+                            .icon
+                                +svgIcon({name: 'tel-2'})
+                            .map-section__row-inner
+                                a(href='tel: ' + telSmall1) !{tel1}
+                                a(href='tel: ' + telSmall2) !{tel2}
+mixin advantagesCol(object)
+    if(object.activeMobile)
+        .advantages-section__col.active-tablet
+            .advantages-section__col-inner
+                .advantages-section__col-img
+                    +svgIcon({name: object.icon})
+                .advantages-section__col-text !{object.text}
+    else
+        .advantages-section__col
+            .advantages-section__col-inner
+                .advantages-section__col-img
+                    +svgIcon({name: object.icon})
+                .advantages-section__col-text !{object.text}
+
+mixin calculateServicesInput(object)
+    if(object.tabIndex)
+        .calculate-section__services-input
+            if(object.checked)
+                input(type="radio" name=object.name id=object.id value=object.value checked)
+            else
+                input(type="radio" name=object.name id=object.id value=object.value )
+            label.calculate-section__services-tab.radio-label(for=object.id data-tab=object.tabIndex) !{object.text}
+    else
+        .calculate-section__services-input
+            if(object.checked)
+                input(type="radio" name=object.name id=object.id value=object.value checked)
+            else
+                input(type="radio" name=object.name id=object.id value=object.value )
+            label.calculate-section__services-tab.radio-label(for=object.id) !{object.text}
+
+mixin calculateCartItem(object)
+    .calculate-section__cart-item
+        .calculate-section__cart-inner(style='background-image: url("images/content/calculate-section/bg.jpg")')
+            .calculate-section__cart-text !{object.text}
+            .calculate-section__cart-input
+                if(object.checked)
+                    input(type="checkbox" name=object.name id=object.id value=object.text checked)
+                else
+                    input(type="checkbox" name=object.name id=object.id value=object.value )
+                label(for=object.id).cart-label
+                    span.block
+                    span Выбрать
+
+mixin slide(object)
+    .reviews-section__slide
+        a(href=object.img + '-pc.jpg').reviews-section__slide-inner
+            picture
+                source(srcset=object.img + '-pc.webp' media="(min-width: 767px)" alt=object.alt type='image/webp')
+                source(srcset=object.img + '-mb.webp' media="(min-width: 0) and (max-width: 767px)" alt=object.alt type='image/webp')
+                img(src=object.img + '-pc.png' srcset=object.img + '-mb.png' + ' 767w' alt=object.alt)
+mixin qustionsRow(object)
+    .questions-section__row
+        .questions-section__row-header
+            span !{object.title}
+            span.questions-section__row-arrow
+                +svgIcon({name: 'arrow-bot'})
+        .questions-section__row-body
+            p !{object.text}
